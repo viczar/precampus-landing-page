@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lemonada|Oleo+Script|Ranga&display=swap");
+
+$source-font: "Source Sans Pro", sans-serif;
+$unica-font: "Unica One", cursive;
+$merry-font: "Merriweather", serif;
+$source-serif-font: "Source Serif Pro", serif;
+
+$font-size: 1.2rem;
+$letter-spacing: 0.05rem;
+$line-height: 1.5;
+
+$ranga: "Ranga", cursive;
+$oleo: "Oleo Script", cursive;
+$lemonada: "Lemonada", cursive;
+
+$black: #22222b;
+
+$active: #00b8c0;
+$active: #8cf8ff;
+$active: #57fffd;
+$active: #51afe8;
+$active: #1fdeff;
+
+$cancel: #ff3b2e;
+$cancel: #e8392a;
+$cancel: #ff5249;
+
+$warning: #ffb435;
+$warning: #ffa22a;
+$warning: #ffc157;
+
+$main: #bb91ff;
+
+* {
+    box-sizing: border-box;
+    margin: 12px;
+}
+
+div,
+span,
+html {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $unica-font;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-family: $source-font;
+}
+
+body {
+    background-color: $black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    font-family: $source-font;
+    color: white;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+.main {
+    margin-top: 32px;
+    max-width: 80ch;
+    margin-bottom: 64px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    background: none;
+    font-size: 0.9rem;
+    letter-spacing: $letter-spacing;
+    font-family: $lemonada;
+    border-radius: 3px;
+    padding: 6px 12px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.icon {
+    font-size: 1.4rem;
+    padding: 0px;
+    margin: 6px;
+}
+button:hover {
+    color: white;
+}
+
+.active {
+    color: $active;
+    border: 2px solid $active;
+}
+.active:hover {
+    background: $active;
+}
+.cancel {
+    color: $cancel;
+    border: 2px solid $cancel;
+}
+.cancel:hover {
+    background: $cancel;
+}
+.warning {
+    color: $warning;
+    border: 2px solid $warning;
+}
+.warning:hover {
+    background: $warning;
+}
+
+input[type="text"] {
+    border: 2px solid $main;
+    border-radius: 3px;
+    padding: 10px;
+    outline: 0;
+    background: none;
+    color: white;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    font-family: $source-font;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+    border: 2px solid white;
+}
+
+label {
+    font-size: $font-size;
+    font-style: italic;
+}
+
+.navbar {
+    background: black;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .navitem {
+        margin: 0px 5%;
+        font-size: 0.8rem;
+    }
+}
+
+.footer {
+    justify-self: flex-end;
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    filter: grayscale(100%);
+    border-radius: 12px;
+    flex: 25%;
+    max-width: 200px;
+    margin: 12px;
+}
+
+.description {
+    flex: 75%;
+    margin: 12px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        flex-wrap: wrap;
+        img {
+            flex: 100%;
+        }
+        description {
+            flex: 100%;
+        }
+    }
+}
