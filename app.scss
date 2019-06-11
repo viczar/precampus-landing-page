@@ -109,6 +109,12 @@ a {
     padding: 0px;
     margin: 6px;
 }
+
+.icon2 {
+    padding: 0px;
+    margin: 2px;
+}
+
 a:hover {
     color: white;
 }
@@ -171,6 +177,8 @@ label {
 }
 
 .footer {
+    text-align: center;
+    padding: 4px;
     justify-self: flex-end;
     background: black;
     opacity: 0.5;
